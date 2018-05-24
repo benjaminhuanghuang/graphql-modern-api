@@ -18,5 +18,9 @@ Install develop tools
 ``` 
     npm i nodemon -g
 ```
+Mongoose for MongoDB accessing and ORM
+```
+    npm i mongoose -S
+```
 
 

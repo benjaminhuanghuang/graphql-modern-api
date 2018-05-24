@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/benjaminhuanghuang/graphql-modern-api#readme",
   "dependencies": {
-    "hapi": "^17.5.0"
+    "hapi": "^17.5.0",
+    "mongoose": "^5.1.2"
   }
 }
