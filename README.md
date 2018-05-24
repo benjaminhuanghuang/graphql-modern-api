@@ -6,13 +6,13 @@ Based on
     - https://github.com/wesharehoodies/graphql-nodejs-hapi-api
 
 ## Setup 
-Creat project folder and npm init
+Creat and init project
 ```
     mkdir modern-api && cd modern-api && npm init -y
 ```
 Install web framework 
 ```
-npm i hapi -S
+    npm i hapi -S
 ```
 Install develop tools
 ``` 
