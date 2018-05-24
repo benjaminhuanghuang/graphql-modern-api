@@ -1,0 +1,23 @@
+{
+  "name": "graphql-modern-api",
+  "version": "1.0.0",
+  "description": "Based on  - How to set-up a powerful API with Nodejs, GraphQL, MongoDB, Hapi, and Swagger     - https://medium.com/@wesharehoodies/how-to-setup-a-powerful-api-with-nodejs-graphql-mongodb-hapi-and-swagger-e251ac189649",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/graphql-modern-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/graphql-modern-api/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/graphql-modern-api#readme",
+  "dependencies": {
+    "hapi": "^17.5.0"
+  }
+}
