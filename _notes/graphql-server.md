@@ -6,3 +6,20 @@
 - apollo-server-hapi is the glue between our hapi server and graphql
 
 
+## Register
+```
+    await server.register({
+        plugin: graphqlHapi,
+        options: {
+            path: '/graphql',
+            graphqlOptions: {
+                schema
+            },
+            route: {
+                cors: true
+            }
+        }
+    });
+
+```
+
