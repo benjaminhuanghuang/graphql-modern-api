@@ -1,11 +1,16 @@
 const hapi = require('hapi');
 const mongoose = require('mongoose');
 const Painting = require('./models/Painting');
-const mongoURI = "mongodb://admin:admin123@ds233970.mlab.com:33970/graphql-api"
+const mongoURI = "mongodb://admin:admin123@ds233970.mlab.com:33970/graphql-api";
+
 mongoose.connect(mongoURI);
 mongoose.connection.once('open', () => {
     console.log('connected to database');
 });
+// graphQL seciton
+const { graphqlHapi, graphiqlHapi } = require('apollo-server-hapi');
+const schema = require('./graphql/schema');
+
 
 const server = hapi.server({
     port: 8964,
@@ -13,6 +18,32 @@ const server = hapi.server({
 })
 
 const init = async () => {
+    await server.register({
+        plugin: graphiqlHapi,
+        options: {
+            path: '/graphiql',
+            graphiqlOptions: {
+                endpointURL: '/graphql'
+            },
+            route: {
+                cors: true
+            }
+        }
+    });
+
+    await server.register({
+        plugin: graphqlHapi,
+        options: {
+            path: '/graphql',
+            graphqlOptions: {
+                schema
+            },
+            route: {
+                cors: true
+            }
+        }
+    });
+
     // setup routing: path-method-handler
     server.route([
         {
